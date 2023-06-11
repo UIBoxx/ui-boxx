@@ -2,12 +2,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./navbar.css";
 import { useRef, useState } from "react";
 import { faAngleRight, faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
+import { To, useNavigate } from 'react-router-dom';
+
 
 
 function MyNavBar() {
+
   const navItems = ["Home", "UI-Components", "Tools"];
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
+
+  const navigate = useNavigate();
+  const handleClick = (link: To) => {
+    navigate(link); // Use the absolute path to navigate to "/tools"
+  };
 
   const navRef = useRef<HTMLDivElement>(null);
   const showNavBar = () => {
@@ -30,7 +38,7 @@ function MyNavBar() {
             }}
             key={items}
           >
-            <a href={items === "Home" ? "/" : items}>{items}</a>
+            <a onClick={()=>handleClick(items === "Home" ? "/" : items)} href="">{items}</a>
             
           </li>
         

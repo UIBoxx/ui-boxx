@@ -1,6 +1,7 @@
 import { faChartColumn } from "@fortawesome/free-solid-svg-icons";
 import "./uicard.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate, To } from "react-router-dom";
 
 interface UiCardProps {
   data: {
@@ -16,45 +17,38 @@ interface UiCardProps {
 const UiCard: React.FC<UiCardProps> = ({ data }) => {
   const { _id, head, htmlcode, csscode, jscode, views } = data;
 
-  const handleCodeButtonClick = async () => {
+  const navigate = useNavigate();
+  const handleCodeButtonClick = async (link: To) => {
     try {
       const response = await fetch(
         `https://uiboxxapi.netlify.app/.netlify/functions/api/webdata/${_id}`
       );
-
+  
       if (response.ok) {
         const data = await response.json();
         const currentViews = parseInt(data.views);
         const updatedDesign = { views: String(currentViews + 1) };
-        
-        // Make a separate request to update the views count
-        await fetch(
-          `https://uiboxxapi.netlify.app/.netlify/functions/api/webdata/${_id}`,
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(updatedDesign),
-          }
-        );
-        const url = `/code/${_id}`;
-        window.location.href = url;
-        
+  
+        await fetch(`https://uiboxxapi.netlify.app/.netlify/functions/api/webdata/${_id}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(updatedDesign),
+        });
+        navigate(link);
         console.log("Updated successfully");
       } else {
         console.error("Failed to fetch views count");
       }
     } catch (error) {
       console.error(error);
-      // Handle the error if the request fails
     }
   };
-
   return (
     <div className="uicard">
       <div className="u-button">
-        <button onClick={handleCodeButtonClick}>Code</button>
+        <button onClick={()=>handleCodeButtonClick(`/code/${_id}`)}>Code</button>
       </div>
       <iframe
         srcDoc={`

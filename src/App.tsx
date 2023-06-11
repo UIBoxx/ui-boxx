@@ -21,8 +21,8 @@ function App() {
         <Route path="/tools" element={<Tools />} />
         <Route path="/code/:id" element={<UIDetails />} />
         <Route path="/ui-components" element={<MainContent />} />
-        <Route path="/glassmorphic-effect-generator" element={<GlassMorphicEffect />} />
-        <Route path="neumorphic-effect-generator" element={<NeuMorphicEffect />} />
+        <Route path="/glass-morphic-effect-generator" element={<GlassMorphicEffect />} />
+        <Route path="/neumorphic-effect-generator" element={<NeuMorphicEffect />} />
         <Route path="/squarecle-svg-shape-generator" element={<SvgShapeGen />} />
         </Routes>
       </body>

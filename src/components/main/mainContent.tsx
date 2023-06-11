@@ -16,35 +16,48 @@ interface ApiDataItem {
 }
 
 function MainContent() {
-const [apiData, setApiData] = useState<ApiDataItem[]>([]);
-const [isLoading, setIsLoading] = useState(true);
-const [searchQuery, setSearchQuery] = useState("");
-const [currentPage, setCurrentPage] = useState(1);
-const [selectedTag, setSelectedTag] = useState<string | null>(null);
-const itemsPerPage = 12;
-
+  const [apiData, setApiData] = useState<ApiDataItem[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const itemsPerPage = 12;
 
   useEffect(() => {
-    // Fetch data from API
-    fetchData();
+    const cachedData = localStorage.getItem("apiData");
+    if (cachedData) {
+      setApiData(JSON.parse(cachedData));
+      setIsLoading(false);
+    } else {
+      fetchData();
+    }
+
+    window.addEventListener("beforeunload", clearCache);
+
+    return () => {
+      window.removeEventListener("beforeunload", clearCache);
+    };
   }, []);
 
-  async function fetchData() {
+  const fetchData = async () => {
     try {
       const response = await fetch(
         "https://uiboxxapi.netlify.app/.netlify/functions/api/webdata"
-      ); // Replace with your API URL
+      );
       const data = await response.json();
-      const reversedData = data.reverse(); // Reverse the data array
+      const reversedData = data.reverse();
       setApiData(reversedData);
+      localStorage.setItem("apiData", JSON.stringify(reversedData));
       setIsLoading(false);
     } catch (error) {
       console.error("Error fetching API data:", error);
       setIsLoading(false);
     }
-  }
+  };
 
-  
+  const clearCache = () => {
+    localStorage.removeItem("apiData");
+  };
 
   const handleSearchInputChange = (
     event: React.SyntheticEvent<HTMLInputElement>
@@ -53,14 +66,14 @@ const itemsPerPage = 12;
     setCurrentPage(1);
   };
 
-  // Filter the apiData based on the searchQuery and selectedTag
   const filteredData = apiData.filter((item) => {
-    const isMatchingTitle = item.title.toLowerCase().includes(searchQuery.toLowerCase());
+    const isMatchingTitle = item.title
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
     const isMatchingTag = selectedTag ? item.tags.includes(selectedTag) : true;
     return isMatchingTitle && isMatchingTag;
   });
 
-  // Calculate pagination
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredData.slice(indexOfFirstItem, indexOfLastItem);
@@ -92,7 +105,7 @@ const itemsPerPage = 12;
           {isLoading ? (
             <MyLoader />
           ) : (
-            currentItems.map((item) => <UiCard key={item._id} data={item}/>)
+            currentItems.map((item) => <UiCard key={item._id} data={item} />)
           )}
           <div className="m-propagation">
             <div className="pagination">
