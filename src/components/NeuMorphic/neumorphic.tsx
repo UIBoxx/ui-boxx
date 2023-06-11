@@ -136,7 +136,7 @@ function NeuMorphicEffect(){
             </div>
             <div className="neu-right">
             <div className="card-property">
-              <label htmlFor="background-color">Background Color:</label>
+              <label htmlFor="background-color">Background:</label>
               <input
                 type="color"
                 id="background-color-picker"
@@ -155,7 +155,7 @@ function NeuMorphicEffect(){
               />
             </div>
             <div className="card-property">
-              <label htmlFor="box-shadow-color">Box Shadow Color:</label>
+              <label htmlFor="box-shadow-color">Box Shadow:</label>
               <input
                 type="color"
                 id="box-shadow-color-picker"
