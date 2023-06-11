@@ -109,13 +109,18 @@
         align-items: center;
     }
     .ui-right{
-        min-height: 80vh;
-        padding: 1rem 0;
+        min-height: 100vh;
+        padding: 2rem 0;
         gap: 6rem;
         width: 320px;
         align-items: start;
+        justify-content: start;
+        /* overflow: hidden; */
     }
-
+    .ui-codes{
+        /* border:  1px solid white; */
+        min-height: 200px;
+    }
     .ui-codes>textarea{
         width: 320px;
         height: 200px;
