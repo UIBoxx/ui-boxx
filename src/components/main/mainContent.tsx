@@ -12,6 +12,7 @@ interface ApiDataItem {
   jscode: string;
   head: string;
   tags: string;
+  views: string;
 }
 
 function MainContent() {
