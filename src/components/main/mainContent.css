@@ -1,0 +1,78 @@
+.main-content{
+    width: 99vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    justify-content: space-between;
+     /* border: 1px solid #fff; */
+}
+
+.m-left{
+    flex: 1;
+    /* border: 1px solid #fff; */
+}
+
+.m-right{
+    flex: 4;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    min-height: 500px;
+    /* border: 1px solid #fff; */
+}
+
+.m-search-box{
+    height: 60px;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.m-search-box input{
+    width: 80%;
+    height: 3.5rem;
+    border-radius: 1rem;
+    border: none ;
+    outline: none;
+    padding: 0 2rem;
+    background-color: #b8b0b04b;
+    color: #fff;
+}
+
+.m-propagation{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aqua; */
+}
+
+.m-propagation button{
+    margin: 5px;
+    padding: 10px 15px;
+}
+
+.active{
+    background-color: red;
+}
+
+@media (max-width: 600px) {
+    .main-content {
+      width: 100vw;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .m-left{
+        display: none;
+    }
+    /* Additional styles for smaller screens */
+  }

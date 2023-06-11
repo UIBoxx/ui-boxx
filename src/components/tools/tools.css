@@ -1,0 +1,150 @@
+.tools-body {
+  min-height: 80vh;
+  width: 100vw;
+  /* border: 1px solid #fff; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.tools-body > * {
+  width: 250px;
+  height: 300px;
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 2;
+}
+.tools-body > * > img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+.tools-body > * > span {
+  color: #ccc;
+  font-size: 2rem;
+  background-color: transparent;
+}
+
+.tools-body > * > a {
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: var(--color-red);
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+}
+
+.tools-body > * > a:hover {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  background-color: #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+}
+
+.neu-card {
+  background-color: #001122;
+  box-shadow: 0px 0px 17px 0px #313135, -0px -0px 17px 0px #313135;
+}
+
+
+.glass-card{
+    background: rgba(196, 144, 144, 0.123);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 5%;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.svg-card{
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.shapes1{
+    position: absolute;
+    /* bottom: 0; */
+    left: 200px;
+    width: 100px;
+    height: 200px;
+    border-radius: 2rem;
+    rotate: 30deg;
+    background-color: red;
+    filter: blur(10px);
+    z-index: 1;
+}
+
+.shapes2{
+    position: absolute;
+    /* bottom: 0; */
+    left: 50%;
+    top: 30%;
+    width: 150px;
+    height: 150px;
+    border-radius: 30%;
+    rotate: 70deg;
+    background: linear-gradient(0deg, rgba(195,74,34,1) 0%, rgba(14,232,54,0.947391456582633) 100%);
+    filter: blur(2px);
+    z-index: 1;
+    animation: anim2 40s ease-in-out infinite;
+}
+.shapes3{
+    position: absolute;
+    /* bottom: 0; */
+    right: 200px;
+    top: 80%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    rotate: 30deg;
+    background: linear-gradient(0deg, rgb(195, 34, 34) 0%, rgb(31, 58, 210) 100%);
+    z-index: 1;
+    filter: blur(5px);
+    animation: anim 10s ease-in-out infinite;
+}
+
+@keyframes anim {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
+
+@keyframes anim2 {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+    
+}
+
+@media (max-width: 600px) {
+    .shapes1{
+        left: 10px;
+        bottom: -150px;
+        rotate: 50deg;
+    }
+    .shapes2{
+        left: 180px;
+        top: 150px;
+    }
+    .shapes3{
+        left: 40px;
+        top: 400px;
+    }
+  }

@@ -1,0 +1,116 @@
+.ui-main{
+    width: 100vw;
+    min-height: 600px;
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+}
+
+.ui-left{
+    height: 600px;
+    /* border: 1px solid red; */
+    max-width: 320px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#ui-title{
+    font-size: 2rem;
+}
+
+#ui-author{
+    color: red;
+    font-size: 1rem;
+}
+
+.ui-frame{
+    height: 400px;
+    width: 320px;
+    background: rgba(0, 17, 34, 0.3);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ui-frame iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+  }
+
+.ui-right{
+    width: 700px;
+    /* border: 1px solid red; */
+    height: 600px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+} 
+
+.ui-codes{
+    /* border:  1px solid white; */
+    height: 200px;
+    width: 90%;
+}
+
+.ui-codes label{
+    font-size: 2rem;
+    color: red;
+}
+
+.ui-codes>textarea{
+    font-family: 'JetBrains Mono', monospace;
+    width: 98%;
+    height: 150px;
+    resize: none;
+    background-color: #2a191c;
+    color: rgb(172, 169, 163);
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.ui-codes button{
+    position: relative;
+    z-index: 9;
+    bottom: 20px;
+    background-color: red;
+}
+
+.ui-codes button:hover{
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+    .ui-main{
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid transparent;
+    }
+
+    .ui-left{
+        width: 320px;
+        align-items: center;
+    }
+    .ui-right{
+        width: 320px;
+        align-items: start;
+    }
+
+    .ui-codes>textarea{
+        width: 320px;
+    }
+  }
