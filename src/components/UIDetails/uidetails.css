@@ -21,6 +21,7 @@
 
 #ui-title{
     font-size: 2rem;
+    text-align: center;
 }
 
 #ui-author{
@@ -110,7 +111,7 @@
     .ui-right{
         min-height: 80vh;
         padding: 1rem 0;
-        gap: 2rem;
+        gap: 6rem;
         width: 320px;
         align-items: start;
     }

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./navbar.css";
 import { useRef, useState } from "react";
-import { faBarsStaggered, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight, faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
 
 
 function MyNavBar() {
@@ -36,7 +36,7 @@ function MyNavBar() {
         
         ))}
         <button className="nav-btn nav-close-btn" onClick={showNavBar}>
-          <FontAwesomeIcon icon={faTimes} />
+        <FontAwesomeIcon icon={faAngleRight} rotation={270} />
         </button>
       </nav>
       <button className="nav-btn" onClick={showNavBar}>
