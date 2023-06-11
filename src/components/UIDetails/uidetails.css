@@ -24,7 +24,7 @@
 }
 
 #ui-author{
-    color: red;
+    color: var(--color-red);
     font-size: 1rem;
 }
 
@@ -68,7 +68,7 @@
 
 .ui-codes label{
     font-size: 2rem;
-    color: red;
+    color: #ddd;
 }
 
 .ui-codes>textarea{
@@ -88,7 +88,7 @@
     position: relative;
     z-index: 9;
     bottom: 20px;
-    background-color: red;
+    background-color: var(--color-red);
 }
 
 .ui-codes button:hover{
@@ -117,5 +117,6 @@
 
     .ui-codes>textarea{
         width: 320px;
+        height: 200px;
     }
   }
