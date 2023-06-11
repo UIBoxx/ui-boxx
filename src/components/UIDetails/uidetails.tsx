@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import "./uidetails.css";
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { faShareFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function UIDetails() {
   const { id } = useParams();
@@ -54,6 +56,29 @@ function UIDetails() {
 
     fetchData();
   }, [id]);
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        let shareText = title;
+        if (author) {
+          shareText += ` created by ${author.substring(0, author.indexOf("@"))}`;
+        }
+        await navigator.share({
+          title: 'Check out this UI design',
+          text: shareText,
+          url: window.location.href
+        });
+        console.log('Shared successfully');
+      } catch (error) {
+        console.error('Error sharing:', error);
+      }
+    } else {
+      console.log('Sharing not supported');
+    }
+  };
+  
+  
 
   return (
     <div className="ui-main">
@@ -109,6 +134,7 @@ function UIDetails() {
           />
         </div>
         <h2>Design by: <span id="ui-author">{author ? author.substring(0, author.indexOf("@")) : "Anonymous"}</span></h2>
+        <span id="share" onClick={handleShare}>Share <i><FontAwesomeIcon style={{backgroundColor:'transparent'}} icon={faShareFromSquare} /></i></span>
       </div>
       <div className="ui-right">
         <div className="ui-codes">
