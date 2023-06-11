@@ -35,6 +35,9 @@
     font-size: 3rem;
     font-weight: 400;
 }
+.l-intro-left p{
+    color: #ddd;
+}
 
 .l-intro-left button{
     background-color: var(--color-red);
@@ -118,22 +121,24 @@
     }
     .l-intro-left{
         width: 320px;
-        height: 400px;
-        align-items: center;
+        min-height: 400px;
+        padding: 1rem 0;
         justify-content: center;
     }
     .l-intro-left p{
         text-align: justify;
+        color: #ddd;
     }
     .l-intro-left h2{
-        font-size: 2.5rem;
+        font-size: 1.6rem;
     }
     .l-intro-left>h2>span{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     .l-intro-right{
         width: 320px;
-        height: 400px;
+        min-height: 400px;
+        padding: 1rem 0;
         align-items: start;
     }
     .l-intro-right>span:last-child{

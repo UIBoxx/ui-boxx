@@ -51,6 +51,7 @@ nav li a {
     border: none;
     outline: none;
     color: #fff;
+    background-color: transparent;
     visibility: hidden;
     opacity: 0;
     font-size: 1.8rem;
@@ -136,5 +137,6 @@ nav li a {
     position: absolute;
     top: 2rem;
     right: 2rem;
+    background-color: transparent;
   }
 }
