@@ -134,6 +134,9 @@
 }
 
 @media (max-width: 600px) {
+    .tools-body{
+        padding: 2rem 0;
+    }
     .shapes1{
         left: 10px;
         bottom: -150px;

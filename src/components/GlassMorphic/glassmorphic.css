@@ -20,7 +20,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 2; 
+  z-index: 2;
 }
 
 .g-left span{
@@ -29,7 +29,8 @@
 }
 
 .g-right {
-  height: 400px;
+  min-height: 300px;
+  padding: 2rem 0;
   width: 300px;
   border-radius: 10px;
   display: flex;
@@ -114,6 +115,10 @@
 
   
 @media (max-width: 600px) {
+  .g-body {
+    min-height: 80vh;
+    padding: 2rem 0;
+  }
     .box-1{
         left: 0;
         bottom: 0;
