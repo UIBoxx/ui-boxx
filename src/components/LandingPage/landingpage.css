@@ -108,6 +108,11 @@
 }
 
 @media (max-width: 600px) {
+    .l-body{
+        min-height: 100vh;
+        padding: 5rem 0;
+        /* border: 1px solid red; */
+    }
     .l-intro{
         justify-content: center;
     }
