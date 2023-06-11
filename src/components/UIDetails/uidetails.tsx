@@ -57,26 +57,38 @@ function UIDetails() {
     fetchData();
   }, [id]);
 
-  const handleShare = async () => {
+  const handleShare = () => {
+    const shareData = {
+      title: 'Check out this UI design',
+      text: author ? `${title} created by ${author.substring(0, author.indexOf("@"))}` : title,
+      url: window.location.href
+    };
+  
     if (navigator.share) {
-      try {
-        let shareText = title;
-        if (author) {
-          shareText += ` created by ${author.substring(0, author.indexOf("@"))}`;
-        }
-        await navigator.share({
-          title: 'Check out this UI design',
-          text: shareText,
-          url: window.location.href
+      navigator.share(shareData)
+        .then(() => {
+          console.log('Shared successfully');
+        })
+        .catch((error) => {
+          console.error('Error sharing:', error);
         });
-        console.log('Shared successfully');
-      } catch (error) {
-        console.error('Error sharing:', error);
-      }
+    } else if (navigator.clipboard && navigator.clipboard.writeText) {
+      const shareUrl = `${shareData.title}\n\n${shareData.text}\n\n${shareData.url}`;
+      navigator.clipboard.writeText(shareUrl)
+        .then(() => {
+          console.log('URL copied to clipboard');
+          // Provide feedback to the user that the URL was copied
+        })
+        .catch((error) => {
+          console.error('Error copying URL:', error);
+          // Handle the error
+        });
     } else {
       console.log('Sharing not supported');
+      // Provide a fallback sharing option or message to the user
     }
   };
+  
   
   
 
