@@ -150,9 +150,8 @@
              transform: translateX(-50rem); 
              rotate: 0deg;
             }
-        100% { transform: translateX(80rem);
+        100% { transform: translateX(50rem);
             rotate: -90deg;
          }
     }
-    
   }
