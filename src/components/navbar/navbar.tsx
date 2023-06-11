@@ -3,6 +3,7 @@ import "./navbar.css";
 import { useRef, useState } from "react";
 import { faAngleRight, faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
 import { To, useNavigate } from 'react-router-dom';
+import Logo from '../images/logo.png';
 
 
 
@@ -27,7 +28,7 @@ function MyNavBar() {
   return (
     <div className="navbar">
       <div className="n-left">
-        <a href="/"><img src="https://uiboxx.in/assets/transparent-a4c1d21d.png" alt="" /></a>
+        <a href="/"><img src={Logo} alt="" /></a>
       </div>
       <nav ref={navRef}>
         {navItems.map((items, index) => (
