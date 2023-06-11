@@ -81,6 +81,7 @@
 #neu-button:hover{
     background-color: var(--primary-color);
     color: #ddd;
+    border: 1px solid var(--color-red);
 }
 
   .card-property{
