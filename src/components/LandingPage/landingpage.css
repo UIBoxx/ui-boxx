@@ -53,12 +53,6 @@
     color: #fff;
 }
 
-.l-intro-left h2 span{
-    font-size: 4rem;
-    color: var(--color-red);;
-    font-weight: 800;
-}
-
 .l-intro-right{
     width: 400px;
     height: 450px;
@@ -112,27 +106,6 @@
 }
 
 
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  50% {
-    border-color: transparent;
-  }
-}
-
-#text {
-  border-right: 2px solid var(--color-red);
-  padding-right: 2px;
-  animation: typing 2s steps(40) infinite, blink-caret 0.75s step-end infinite;
-}
-
 @media (max-width: 600px) {
     .l-body{
         min-height: 100vh;
@@ -154,9 +127,6 @@
     }
     .l-intro-left h2{
         font-size: 1.6rem;
-    }
-    .l-intro-left>h2>span{
-        font-size: 2.5rem;
     }
     .l-intro-right{
         width: 320px;

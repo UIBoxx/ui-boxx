@@ -9,6 +9,7 @@ import GlassMorphicEffect from "./components/GlassMorphic/glassmorphic";
 import NeuMorphicEffect from "./components/NeuMorphic/neumorphic";
 import SvgShapeGen from "./components/SVGShapeGen/svgShapeGen";
 import LandingPage from "./components/LandingPage/landingpage";
+import TypingEffect from "./components/typingEffect/typinig";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/glass-morphic-effect-generator" element={<GlassMorphicEffect />} />
         <Route path="/neumorphic-effect-generator" element={<NeuMorphicEffect />} />
         <Route path="/squarecle-svg-shape-generator" element={<SvgShapeGen />} />
+        <Route path="/type" element={<TypingEffect />} />
         </Routes>
       </body>
       <MyFooter />

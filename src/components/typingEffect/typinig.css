@@ -1,0 +1,44 @@
+.typing-effect {
+  font-size: 2rem;
+  color: teal;
+  font-weight: 900;
+  display: inline-block;
+  background-color: transparent;
+}
+
+.typing-effect span {
+  color: var(--color-red);
+  background-color: transparent;
+  font-size: 3rem;
+  color: var(--color-red);
+  font-weight: 600;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+#text {
+  border-right: 2px solid var(--color-red);
+  padding-right: 2px;
+  animation: typing 2s steps(40) infinite, blink-caret 0.75s step-end infinite;
+}
+
+
+@media (max-width: 600px) {
+    .typing-effect span{
+        font-size: 1.6rem;
+    }
+
+}
