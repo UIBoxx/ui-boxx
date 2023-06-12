@@ -9,7 +9,7 @@ import Logo from '../images/logo.png';
 
 function MyNavBar() {
 
-  const navItems = ["Home", "UI-Components", "Tools"];
+  const navItems = ["Home", "UI-Components", "Tools","Contact"];
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
 

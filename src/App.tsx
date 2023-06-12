@@ -10,6 +10,7 @@ import NeuMorphicEffect from "./components/NeuMorphic/neumorphic";
 import SvgShapeGen from "./components/SVGShapeGen/svgShapeGen";
 import LandingPage from "./components/LandingPage/landingpage";
 import TypingEffect from "./components/typingEffect/typinig";
+import ContactUs from "./components/contact/contact";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/neumorphic-effect-generator" element={<NeuMorphicEffect />} />
         <Route path="/squarecle-svg-shape-generator" element={<SvgShapeGen />} />
         <Route path="/type" element={<TypingEffect />} />
+        <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </body>
       <MyFooter />

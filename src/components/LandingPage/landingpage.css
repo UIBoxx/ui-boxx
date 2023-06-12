@@ -40,6 +40,11 @@
     color: #ddd;
 }
 
+.l-intro-left h4{
+    background-color: transparent;
+    color: red;
+}
+
 .l-intro-left button{
     background-color: var(--color-red);
     border: none;
@@ -125,6 +130,7 @@
         text-align: justify;
         color: #ddd;
     }
+
     .l-intro-left h2{
         font-size: 1.6rem;
     }

@@ -77,15 +77,12 @@ function UIDetails() {
       navigator.clipboard.writeText(shareUrl)
         .then(() => {
           console.log('URL copied to clipboard');
-          // Provide feedback to the user that the URL was copied
         })
         .catch((error) => {
           console.error('Error copying URL:', error);
-          // Handle the error
         });
     } else {
       console.log('Sharing not supported');
-      // Provide a fallback sharing option or message to the user
     }
   };
   
