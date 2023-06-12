@@ -71,7 +71,7 @@
 }
 
 .fields label{
-    color: var(--color-red);
+    color: #ddd;
     font-weight: 800;
     font-size: 1.6rem;
     background-color: transparent;
@@ -124,6 +124,7 @@
         align-items: center;
         justify-content: center;
         padding: 2rem 0;
+        flex-direction: column;
     }
     .contact-left h1{
         font-size: 2.5rem;

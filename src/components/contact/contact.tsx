@@ -90,7 +90,7 @@ const ContactUs = () => {
     <div className="contact-body">
       <div className="contact-left">
       <h1>Contact Us</h1>
-      <p>Please fill out the form below to get in touch with us. We'll respond to your message as soon as possible.</p>
+      <p>Please fill out the form provided to get in touch with us, and we'll get back to you as soon as we can.</p>
       </div>
       <div className="contact-right">
         <form ref={form} onSubmit={sendEmail}>
