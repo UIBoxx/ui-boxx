@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './typinig.css';
 
 const TypingComponent: React.FC = () => {
-  const phrases = ['UIBOXX !','World of UI Magic:)'];
+  const phrases = ['UIBOXX !',':)'];
   const [textElement, setTextElement] = useState<HTMLElement | null>(null);
   let currentPhraseIndex = 0;
 
