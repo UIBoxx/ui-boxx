@@ -33,7 +33,7 @@ const MyAside: React.FC<MyAsideProps> = ({ tags, selectedTag, setSelectedTag }) 
               className={tag === selectedTag ? 'selected' : ''}
               onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
             >
-              {`${tag} (${count})`}
+              {`${tag.charAt(0).toUpperCase()+tag.slice(1)} (${count})`}
             </li>
           ))}
         </ul>

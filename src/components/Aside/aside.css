@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: start;
     flex-direction: column;
+    color: #ddd;
 }
 
 .a-header{
@@ -16,7 +17,7 @@
 }
 
 .a-header h1{
-    color: #ae2323;
+    color: var(--color-red);
     font-size: 2.5rem;
 }
 
@@ -33,7 +34,9 @@
 }
 
 .a-body>ul>li{
-    margin-top: 1.2rem;
+    margin-top: 0.5rem;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .a-body>ul>li>a{
@@ -51,7 +54,9 @@
 }
 
 .selected {
-    color: red;
+    color: rgb(155, 27, 27);
+    background-color: #dddddd1d;
+    border-radius: 5px;
 }
   
 @media (max-width: 600px) {
