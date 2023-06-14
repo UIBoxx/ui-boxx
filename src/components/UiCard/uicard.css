@@ -1,21 +1,22 @@
 .uicard{
-    height: 400px;
-    width: 320px;
+    height: 280px;
+    width: 224px;
     background: rgba(0, 17, 34, 0.3);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 3px;
+    border: 1px solid rgb(223, 47, 47);
     display: flex;
     justify-content: center;
     align-items: center;
+    /* overflow: hidden; */
 }
   
   .uicard iframe {
     height: 100%;
     width: 100%;
     border: none;
-    border-radius: 10px;
+    border-radius: 3px;
   }
 
 .u-button{
@@ -43,17 +44,20 @@
   position: absolute;
   bottom: -1px;
   right: -1px;
-  width: 30%;
+  width: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   gap: 5px;
+  padding-right: 5px;
   background-color: transparent;
 }
 
 .ui-view span{
   background-color: transparent;
-  color: #000;
+  color: #555353;
+  font-size: 0.8rem;
+  font-weight: 800;
 }
 
 .ui-view i{

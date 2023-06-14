@@ -23,19 +23,22 @@ const UiCard: React.FC<UiCardProps> = ({ data }) => {
       const response = await fetch(
         `https://uiboxxapi.netlify.app/.netlify/functions/api/webdata/${_id}`
       );
-  
+
       if (response.ok) {
         const data = await response.json();
         const currentViews = parseInt(data.views);
         const updatedDesign = { views: String(currentViews + 1) };
-  
-        await fetch(`https://uiboxxapi.netlify.app/.netlify/functions/api/webdata/${_id}`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(updatedDesign),
-        });
+
+        await fetch(
+          `https://uiboxxapi.netlify.app/.netlify/functions/api/webdata/${_id}`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updatedDesign),
+          }
+        );
         navigate(link);
         console.log("Updated successfully");
       } else {
@@ -48,7 +51,9 @@ const UiCard: React.FC<UiCardProps> = ({ data }) => {
   return (
     <div className="uicard">
       <div className="u-button">
-        <button onClick={()=>handleCodeButtonClick(`/code/${_id}`)}>Code</button>
+        <button onClick={() => handleCodeButtonClick(`/code/${_id}`)}>
+          Code
+        </button>
       </div>
       <iframe
         srcDoc={`
@@ -73,7 +78,11 @@ const UiCard: React.FC<UiCardProps> = ({ data }) => {
                             justify-content: center;
                             align-items: center;
                             height: 400px;
-                            background:#ddd;
+                            width: 320px;
+                            background: #ddd;
+                            transform: scale(0.7); /* Scales the content down to fit */
+                            transform-origin: top left;
+                            overflow:hidden;
                           } 
                           ::-webkit-scrollbar {
                             display: none

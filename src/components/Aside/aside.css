@@ -1,67 +1,88 @@
-.aside{
-    width: 250px;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: column;
-    color: #ddd;
+.aside {
+  width: 250px;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  color: #ddd;
 }
 
-.a-header{
-    flex: 1;
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.a-header {
+  flex: 1;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.a-header h1{
-    color: var(--color-red);
-    font-size: 2.5rem;
+.a-header h1 {
+  color: var(--color-red);
+  font-size: 2.5rem;
 }
 
-.a-body{
-    flex: 4;
-    width: 80%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.a-body {
+  flex: 4;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.a-body>ul{
-    list-style: none;
+.a-body > ul {
+  list-style: none;
 }
 
-.a-body>ul>li{
-    margin-top: 0.5rem;
-    padding: 5px;
-    cursor: pointer;
-}
-
-.a-body>ul>li>a{
-    color: #ccc;
-    font-size: 1.5rem;
-    padding: 5px 40px;
-    border-radius: 5px;
-    background: rgba(0, 17, 34, 0.3);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-    transition: 1s ease-in;
-}
-
-.a-body>ul>li>a:hover{
-    border-left: 1px solid rgba(255, 255, 255, 0.18);
+.a-body > ul > li {
+  margin-top: 0.5rem;
+  padding: 5px;
+  cursor: pointer;
+  color: #ddd;
 }
 
 .selected {
-    color: rgb(155, 27, 27);
-    background-color: #dddddd1d;
-    border-radius: 5px;
+  color: rgb(155, 27, 27);
+  background-color: #a0181893;
+  border-radius: 5px;
 }
-  
+
 @media (max-width: 600px) {
-    .aside {
-      display: none;
-    }
-    /* Additional styles for smaller screens */
+  .aside {
+    width: 96%;
+    display: block;
+    min-height: 100px;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    padding: 2rem 10px;
   }
+  .a-header {
+    flex: 1;
+    width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .a-header h1 {
+    color: var(--color-red);
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+  .a-body {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid #ddd; */
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .a-body > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+}

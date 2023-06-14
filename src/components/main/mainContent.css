@@ -67,12 +67,15 @@
     .main-content {
       width: 100vw;
       min-height: 100vh;
+      padding: 2rem 0;
+      /* border: 1px solid red; */
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
     }
-    .m-left{
-        display: none;
-    }
+    /* .m-left{
+        display: block;
+    } */
     /* Additional styles for smaller screens */
   }
