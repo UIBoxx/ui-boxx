@@ -20,7 +20,7 @@ function UIGenerate() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`http://heypro.onrender.com/generate-code?prompt=${encodeURIComponent(message)}`);
+      const response = await fetch(`http://127.0.0.1:5000/generate-code?prompt=${encodeURIComponent(message)}`);
       if (response.ok) {
         const data = await response.json();
 
