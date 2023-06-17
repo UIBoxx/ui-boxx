@@ -77,8 +77,8 @@ const UiCard: React.FC<UiCardProps> = ({ data }) => {
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            height: 400px;
-                            width: 320px;
+                            min-height: 400px;
+                            min-width: 320px;
                             background: #ddd;
                             transform: scale(0.7); /* Scales the content down to fit */
                             transform-origin: top left;

@@ -11,6 +11,7 @@ import SvgShapeGen from "./components/SVGShapeGen/svgShapeGen";
 import LandingPage from "./components/LandingPage/landingpage";
 import TypingEffect from "./components/typingEffect/typinig";
 import ContactUs from "./components/contact/contact";
+import UIGenerate from "./components/Tutorials/uizen";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             />
             <Route path="/type" element={<TypingEffect />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/generate" element={<UIGenerate />} />
           </Routes>
         </body>
         <MyFooter />
