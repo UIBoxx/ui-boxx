@@ -42,12 +42,12 @@ function MyNavBar() {
             <a onClick={()=>handleClick(items === "Home" ? "/" : items)} href="">{items}</a>
             
           </li>
-        
         ))}
         <button className="nav-btn nav-close-btn" onClick={showNavBar}>
         <FontAwesomeIcon icon={faAngleRight} rotation={270} />
         </button>
       </nav>
+      <a id="gen-a" href="/generate"><button id="gen-b">Generate UI</button></a>
       <button className="nav-btn" onClick={showNavBar}>
         <FontAwesomeIcon icon={faBarsStaggered} />
       </button>

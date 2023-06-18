@@ -11,7 +11,7 @@ import SvgShapeGen from "./components/SVGShapeGen/svgShapeGen";
 import LandingPage from "./components/LandingPage/landingpage";
 import TypingEffect from "./components/typingEffect/typinig";
 import ContactUs from "./components/contact/contact";
-import UIGenerate from "./components/Tutorials/uizen";
+import UIGenerate from "./components/UIGenerate/uizen";
 
 function App() {
   return (

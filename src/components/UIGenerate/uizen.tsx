@@ -61,13 +61,20 @@ function UIGenerate() {
 
   return (
     <div className="gen-ui-body">
+      <div className="gen-top">
+        <span>Shape your Imagination</span>
+        <span>With</span>
+        <span> Simple Prompts..</span>
+        <span>#web #UI #HTML/CSS</span>
+      </div>
+      <div className="main">
       <div className="gen-head">
         <textarea
           placeholder="Type your prompt here..."
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
-        <button onClick={handleSubmit}>Submit</button>
+        <button onClick={handleSubmit}>Generate</button>
         {generatedCode ? (
           <button id="copy-gen-code" onClick={handleCopyCode}>
             {copyButtonText}
@@ -75,14 +82,17 @@ function UIGenerate() {
         ) : null}
       </div>
 
-      <div className="gen-content">
+      {generatedCode ?
+        <div className="gen-content">
         {isLoading ? (
           <MyLoader />
         ) : generatedCode ? (
           <iframe srcDoc={generatedCode}></iframe>
         ) : (
-          <p>...</p>
+          <p></p>
         )}
+      </div>:null
+      }
       </div>
     </div>
   );
