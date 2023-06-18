@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './uizen.css';
 import MyLoader from '../loader/loader';
+import demo from '../images/demo.mp4'
 
 function UIGenerate() {
   const [message, setMessage] = useState('');
@@ -93,6 +94,13 @@ function UIGenerate() {
         )}
       </div>:null
       }
+      </div>
+      <div className="demo">
+        <h2>Watch Demo</h2>
+      <video controls>
+  <source src={demo} type="video/mp4"/>
+  Your browser does not support the video tag.
+</video>
       </div>
     </div>
   );

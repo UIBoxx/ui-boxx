@@ -42,6 +42,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   padding: 2rem 0;
+  /* border: 1px solid red; */
 }
 
 .gen-head{
@@ -109,9 +110,35 @@
   overflow: hidden;
 }
 
+.demo{
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* border: 1px solid red; */
+}
+
+.demo h2{
+  color: var(--color-red);
+  background-color: transparent;
+  font-size: 4rem;
+  font-weight: 800;
+}
+
+.demo video{
+  width: 600px;
+  height: 400px;
+  object-fit: contain;
+}
+
 @media (max-width: 600px) {
   .gen-head{
     width: 300px;
+  }
+
+  .main{
+    min-height: 40vh;
   }
 
   .gen-content{
@@ -145,5 +172,21 @@
     font-weight: 800;
     font-size: 1rem;
     text-align: left;
+  }
+  .demo{
+    height: 40vh;
+    flex-direction: column;
+  }
+
+  .demo h2{
+    color: var(--color-red);
+    background-color: transparent;
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .demo video{
+    width: 300px;
+    height: 250px;
+    object-fit: contain;
   }
 }
