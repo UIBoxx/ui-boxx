@@ -62,10 +62,15 @@ function UIGenerate() {
 
   return (
     <div className="gen-ui-body">
-      <div className="gen-top">
+      {/* <div className="gen-top">
         <span>Shape your Imagination With</span>
         <span>Simple Prompts</span>
         <span>#web #UI #HTML/CSS</span>
+      </div> */}
+      <div className="prompt-example">
+        <h2>Example:</h2>
+        <span>Make a beautiful login page of background #ddd and shadow effect.</span>
+        <span>Make a button with background color red and when I hover on it, change into green background.</span>
       </div>
       <div className="main">
       <div className="gen-head">
