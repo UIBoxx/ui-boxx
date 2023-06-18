@@ -20,7 +20,11 @@ function UIGenerate() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`https://heypro.onrender.com/generate-code?prompt=${encodeURIComponent(message)}`);
+      const appendedText = 'write just html/css code in a single index.html file.';
+
+      const response = await fetch(`https://heypro.onrender.com/generate-code?prompt=${encodeURIComponent(message + ' ' + appendedText)}`);
+
+      // const response = await fetch(`https://heypro.onrender.com/generate-code?prompt=${encodeURIComponent(message)}`);
       if (response.ok) {
         const data = await response.json();
 
