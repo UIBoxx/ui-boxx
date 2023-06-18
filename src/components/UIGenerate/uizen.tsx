@@ -63,9 +63,8 @@ function UIGenerate() {
   return (
     <div className="gen-ui-body">
       <div className="gen-top">
-        <span>Shape your Imagination</span>
-        <span>With</span>
-        <span> Simple Prompts..</span>
+        <span>Shape your Imagination With</span>
+        <span>Simple Prompts</span>
         <span>#web #UI #HTML/CSS</span>
       </div>
       <div className="main">

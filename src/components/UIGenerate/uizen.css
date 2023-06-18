@@ -24,12 +24,14 @@
   color: #ddd;
   background-color: transparent;
 }
-.gen-top>span:nth-child(3){
+.gen-top>span:nth-child(2){
   color: var(--color-red);
   font-weight: 800;
   font-size: 3.5rem;
+  font-weight: 200;
+  letter-spacing: 2px;
 }
-.gen-top>span:nth-child(4){
+.gen-top>span:nth-child(3){
   display: none;
 }
 
@@ -160,12 +162,13 @@
     color: #ddd;
     font-size: 2rem;
   }
-  .gen-top>span:nth-child(3){
+  .gen-top>span:nth-child(2){
     color: var(--color-red);
-    font-weight: 800;
+    font-weight: 200;
     font-size: 2.5rem;
+    letter-spacing: 2px;
   }
-  .gen-top>span:nth-child(4){
+  .gen-top>span:nth-child(3){
     display: block;
     background-color: transparent;
     color: rgb(7, 104, 7);
