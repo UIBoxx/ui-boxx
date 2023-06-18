@@ -82,7 +82,7 @@ function UIGenerate() {
         ) : null}
       </div>
 
-      {generatedCode ?
+      {generatedCode ||  isLoading?
         <div className="gen-content">
         {isLoading ? (
           <MyLoader />
