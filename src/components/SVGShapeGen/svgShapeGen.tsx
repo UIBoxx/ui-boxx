@@ -2,6 +2,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { copy } from "clipboard";
 import './svgShapeGen.css';
+import Desc from "../desc/desc";
+import MyHelmet from "../helmet/helmet";
 
 function SvgShapeGen() {
   const [rotation, setRotation] = useState(30);
@@ -76,6 +78,11 @@ function SvgShapeGen() {
 
   return (
     <div className="svg-body">
+       <MyHelmet
+           title="Squarecle SVG shape generator" 
+           des="Unleash your creativity with our Squarecle SVG Shape Generator tool. Design and generate custom squarecle SVG shapes effortlessly for free. Enhance your web graphics and bring unique visual elements to your projects." 
+           keywords="Squarecle SVG shape generator, SVG shape tool, Squarecle shape design, SVG graphics generator, Web design resources, Free SVG shape generator, Squarecle shapes, Custom SVG shapes, Web graphics enhancement, SVG shape creation, Creative design tool, SVG shape customization, Squarecle art generator, Free web design tool, SVG shape library, Unique visual elements, Web development resources, Graphic design utilities, SVG shape manipulation, Squarecle SVG artwork"
+           />
       <div className="svg-left">
         <div className="svg-card-1"></div>
         <div className="svg-card-2">
@@ -154,6 +161,7 @@ function SvgShapeGen() {
         </div>
         <button onClick={copySvgCode}>{buttonText}</button>
       </div>
+      <Desc flexDirection='row' title={'Create Squarecle SVG'} desc={'Discover the magic of our SVG generator that creates beautifully crafted square and circular shapes. Whether you\'re a designer seeking inspiration or simply looking to add a touch of elegance to your projects, our intuitive tool enables you to effortlessly generate stunning SVG shapes that captivate the eye. With endless customization options at your disposal, you can change the size, color, and other attributes to match your vision perfectly. Immerse yourself in a world of artistic possibilities and unleash the power of visually striking shapes with our remarkable SVG generator.'}/>
     </div>
   );
 }

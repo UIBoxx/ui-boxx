@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import MyAside from "../Aside/aside";
 import UiCard from "../UiCard/uicard";
 import MyLoader from "../loader/loader";
+import MyHelmet from "../helmet/helmet";
 
 interface ApiDataItem {
   _id: string;
@@ -85,6 +86,7 @@ function MainContent() {
 
   return (
     <div className="page-body">
+      <MyHelmet title="Free UI components" des="Enhance your web development projects with our collection of free customizable UI components. From cards and inputs to loaders and backgrounds, our UI components are designed to elevate your website's aesthetics and functionality to the next level." keywords="Free UI components, Customizable UI elements, Web development resources, Card components, Input components, Text components, Loader components, Background components, Form components, Spinner components, Box components, Switch components, Button components, Icon components, Navbar components, Web design elements, User interface enhancements, Website functionality, UI customization options, Front-end development tools"/>
       <div className="main-content">
         <div className="m-left">
           <MyAside

@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { faShareFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import MyHelmet from "../helmet/helmet";
 
 function UIDetails() {
   const { id } = useParams();
@@ -91,6 +92,7 @@ function UIDetails() {
 
   return (
     <div className="ui-main">
+      <MyHelmet title={title} des="Enhance your web development projects with our collection of free customizable UI components. From cards and inputs to loaders and backgrounds, our UI components are designed to elevate your website's aesthetics and functionality to the next level." keywords={"Free UI components, Customizable UI elements, Web development resources, Card components, Input components, Text components, Loader components, Background components, Form components, Spinner components, Box components, Switch components, Button components, Icon components, Navbar components, Web design elements, User interface enhancements, Website functionality, UI customization options, Front-end development tools, " +title}/>
       <div className="ui-left">
         <span id="ui-title">{title}</span>
         <div className="ui-frame">

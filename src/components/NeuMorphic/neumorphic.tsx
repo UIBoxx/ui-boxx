@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import './neumorphic.css';
+import Desc from "../desc/desc";
+import MyHelmet from "../helmet/helmet";
 
 function NeuMorphicEffect(){
     const [buttonText, setButtonText] = useState("Copy CSS Code");
@@ -127,6 +129,11 @@ function NeuMorphicEffect(){
 
     return (
         <div className="neu-body">
+          <MyHelmet
+           title="Neumorphic effect generator" 
+           des=" Elevate your web design with our Neumorphic Effect Generator tool. Create stunning neumorphic effects for your UI components with ease. Enhance your website's aesthetics and user experience, all for free." 
+           keywords="Neumorphic effect generator, Neumorphism, Neumorphic UI components, Web design tool, UI design effects, Neumorphic styling, Free neumorphic effects, User interface enhancements, Neumorphic design trends, Web component styling, Neumorphic shadows, Neumorphic buttons, Neumorphic cards, Neumorphic inputs, UI/UX design, Enhance website aesthetics, Neumorphic design elements, Web design resources, Neumorphic styling tool, Neumorphic generator"
+           />
             <div className="neu-left" style={{ backgroundColor }}>
                 <div className="n-box1"></div>
                 <div className="n-box2"></div>
@@ -245,6 +252,7 @@ function NeuMorphicEffect(){
             </div>
             <button id="neu-button" onClick={copyCssCode}>{buttonText}</button>
             </div>
+            <Desc flexDirection='row' title={'Create Neumorphic Effect'} desc={'Introducing our incredible tool that enables you to effortlessly create captivating neumorphic effects for your modern designs. Neumorphism is a popular design trend that adds a sleek and realistic 3D-like appearance to user interfaces. With our user-friendly tool, you can easily generate neumorphic elements with soft shadows and subtle highlights, giving your designs a modern and tactile feel. Whether you\'re designing websites, apps, or graphics, our tool empowers you to bring depth and sophistication to your creations. Elevate your designs with the mesmerizing allure of neumorphism and unlock a new level of visual appeal. Explore the endless possibilities and make your designs stand out with this powerful and trendy effect. Don\'t miss out on this opportunity to create stunning neumorphic designs that captivate and impress. Get started now and take your design game to the next level!'}/>
         </div>
     );
 }

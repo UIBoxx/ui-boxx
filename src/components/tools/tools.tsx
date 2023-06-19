@@ -1,6 +1,7 @@
 import "./tools.css";
 import svgShape from '../images/svgShape.png';
 import { useNavigate, To } from 'react-router-dom';
+import MyHelmet from "../helmet/helmet";
 
 
 function Tools() {
@@ -11,6 +12,7 @@ function Tools() {
 
   return (
     <div className="tools-body">
+      <MyHelmet title="Tools" des="Explore our collection of free web design tools: SVG Shape Generator, Neumorphic Effect Generator, and Glassmorphic Effect Generator. Create stunning visuals and enhance your website's aesthetic with ease." keywords="SVG Shape Generator,Neumorphic Effect Generator,Glassmorphic Effect Generator,Free web design tools , Visual enhancement, Aesthetic design,Webpage effectsWeb design resources,SVG shapes,Neumorphism,Glassmorphism,Website aesthetics,Design tool collection,Create stunning visuals,User-friendly web design"/>
       <div className="svg-card">
       <img src={svgShape} alt="" />
         <span>SquareCle SVG</span>

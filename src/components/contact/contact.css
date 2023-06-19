@@ -1,11 +1,13 @@
 .contact-body {
-  min-height: 80vh;
+  min-height: 60vh;
   width: 100vw;
   /* border: 1px solid #fff; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
+  padding: 4rem 0;
 }
 .custom-toast{
     background-color: transparent;
@@ -29,7 +31,7 @@
 }
 
 .contact-left {
-  width: 500px;
+  width: 600px;
   min-height: 300px;
   display: flex;
   align-items: start;
@@ -124,7 +126,6 @@
         align-items: center;
         justify-content: center;
         padding: 2rem 0;
-        flex-direction: column;
     }
     .contact-left h1{
         font-size: 2.5rem;
@@ -132,7 +133,7 @@
     }
     .contact-left{
         width: 300px;
-        padding: 1rem 0;
+        padding: 1rem;
     }
     .contact-right{
         padding: 1rem 0;

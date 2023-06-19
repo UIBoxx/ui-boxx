@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import "./glassmorphic.css";
+import Desc from "../desc/desc";
+import MyHelmet from "../helmet/helmet";
+
 
 function GlassMorphicEffect() {
   const [buttonText, setButtonText] = useState("Copy CSS Code");
@@ -71,6 +74,11 @@ function GlassMorphicEffect() {
 
   return (
     <div className="g-body">
+      <MyHelmet
+           title="Glassmorphic effect generator" 
+           des="Add a touch of elegance to your web design with our Glassmorphic Effect Generator tool. Create stunning glassmorphic effects for your UI components effortlessly. Enhance your website's visual appeal and user experience, all free of charge." 
+           keywords="Glassmorphic effect generator, Glassmorphism, Glassmorphic UI components, Web design tool, UI design effects, Glassmorphic styling, Free glassmorphic effects, User interface enhancements, Glassmorphic design trends, Web component styling, Glassmorphic shadows, Glassmorphic buttons, Glassmorphic cards, Glassmorphic inputs, UI/UX design, Enhance website aesthetics, Glassmorphic design elements, Web design resources, Glassmorphic styling tool, Glassmorphic generator"
+           />
       <div className="g-left" style={glassStyle}>
       <span>🧡</span>
       </div>
@@ -137,6 +145,7 @@ function GlassMorphicEffect() {
       <div className="box-1"></div>
       <div className="box-2"></div>
       <div className="box-3"></div>
+      <Desc flexDirection='row' title={'Create Glassmorphic Effect'} desc={'Introducing our amazing tool that helps you effortlessly create mesmerizing glassmorphic effects for your modern designs. Glassmorphism is a hot trend in contemporary design, adding elegance and depth to user interfaces. With our user-friendly tool, you can generate stunning glass-like elements using smooth blur, transparency, and subtle reflections. Whether you\'re designing websites, mobile apps, or graphics, our tool empowers you to create visually captivating experiences. Elevate your designs with the enchanting allure of glassmorphism and unleash your creativity like never before. Get started now and make your designs shine with this powerful and trendy effect!'}/>
     </div>
   );
 }

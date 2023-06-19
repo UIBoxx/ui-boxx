@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import './uizen.css';
 import MyLoader from '../loader/loader';
-import demo from '../images/demo.mp4'
+import demoVid from '../images/demo.mp4'
+import MyDemo from '../Demo/demo';
+import MyHelmet from '../helmet/helmet';
 
 function UIGenerate() {
   const [message, setMessage] = useState('');
@@ -24,8 +26,6 @@ function UIGenerate() {
       const appendedText = 'write just html/css code in a single index.html file.';
 
       const response = await fetch(`https://heypro.onrender.com/generate-code?prompt=${encodeURIComponent(message + ' ' + appendedText)}`);
-
-      // const response = await fetch(`https://heypro.onrender.com/generate-code?prompt=${encodeURIComponent(message)}`);
       if (response.ok) {
         const data = await response.json();
 
@@ -62,11 +62,11 @@ function UIGenerate() {
 
   return (
     <div className="gen-ui-body">
-      {/* <div className="gen-top">
-        <span>Shape your Imagination With</span>
-        <span>Simple Prompts</span>
-        <span>#web #UI #HTML/CSS</span>
-      </div> */}
+      <MyHelmet
+        title="Generate UI Components"
+        des="Discover our AI-powered UI Components Generator tool that creates custom web UI components based on your prompts. Unlock endless design possibilities and streamline your web development process with ease."
+        keywords="AI-powered UI components generator, Custom web UI components, Web development tool, UI design automation, Prompt-based UI component generation, AI-driven UI components, Design automation tool, Web UI generation, AI-based web components, Customizable UI elements, Streamlined web development, Efficient UI component creation, Design possibilities, AI-driven design tool, Web UI generator, Smart UI components, AI-assisted web design, User prompt-based UI generation, Automated UI components, Enhance web development workflow"
+      />
       <div className="prompt-example">
         <h2>Example:</h2>
         <span>Make a beautiful login page of background #ddd and shadow effect.</span>
@@ -96,16 +96,10 @@ function UIGenerate() {
         ) : (
           <p></p>
         )}
-      </div>:null
+      </div>: null
       }
       </div>
-      <div className="demo">
-        <h2>Watch Demo</h2>
-      <video controls>
-  <source src={demo} type="video/mp4"/>
-  Your browser does not support the video tag.
-</video>
-      </div>
+      <MyDemo title='Watch Demo' demo={demoVid}/>
     </div>
   );
 }
