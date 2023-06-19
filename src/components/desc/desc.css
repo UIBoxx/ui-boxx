@@ -52,4 +52,8 @@
         align-items: end;
     }
 
+    .desc-content span:nth-child(1){
+        font-size: 2rem;
+    }
+
 }
