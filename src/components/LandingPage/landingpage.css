@@ -1,3 +1,4 @@
+
 .l-body{
     min-height: 80vh;
     width: 100vw;
@@ -169,10 +170,11 @@
     color: #ddd;
     background-color: transparent;
 }
+
 .l-content-right>h3{
     color: #ddd;
     background-color: transparent;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 200;
 }
 
