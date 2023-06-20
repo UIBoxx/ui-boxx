@@ -15,12 +15,14 @@ import UIGenerate from "./components/UIGenerate/uizen";
 import TermsAndConditions from "./components/terms & Conditions/terms";
 import PrivacyPolicy from "./components/terms & Conditions/privacy";
 import Disclaimer from "./components/terms & Conditions/disclaimer";
+import BuyMeCoffee from "./components/Buy Me Coffee/support";
 
 function App() {
   return (
     <BrowserRouter basename="/">
       <div className="app">
         <MyNavBar />
+        <BuyMeCoffee/>
         <body>
           <Routes>
             <Route

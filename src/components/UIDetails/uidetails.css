@@ -9,6 +9,27 @@
     /* border: 1px solid red; */
 }
 
+.custom-toast{
+    background-color: transparent;
+}
+
+.custom-toast-content{
+    background-color: transparent;
+    color: #ddd;
+}
+.custom-toast-close{
+    background-color: var(--color-red);
+    border: none;
+    color: #ddd;
+    padding: 5px 20px;
+}
+
+.custom-toast-close:hover{
+    background-color: transparent;
+    border: 1px solid var(--color-red);
+    color: #ddd;
+}
+
 .ui-left{
     height: 600px;
     /* border: 1px solid red; */

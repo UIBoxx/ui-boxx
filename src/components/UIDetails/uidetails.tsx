@@ -5,6 +5,10 @@ import axios from 'axios';
 import { faShareFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import MyHelmet from "../helmet/helmet";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
+
+
 
 function UIDetails() {
   const { id } = useParams();
@@ -17,7 +21,6 @@ function UIDetails() {
     textarea1: false,
     textarea2: false,
     textarea3: false,
-    // textarea4: false
   });
 
   const handleCopy = (event: React.MouseEvent<HTMLButtonElement>, textareaId: string) => {
@@ -58,33 +61,45 @@ function UIDetails() {
     fetchData();
   }, [id]);
 
+  const CustomToast = ({
+    closeToast,
+    message,
+  }: {
+    closeToast: () => void;
+    message: string;
+  }) => (
+    <div className="custom-toast">
+      <div className="custom-toast-content">{message}</div>
+      <button className="custom-toast-close" onClick={closeToast}>
+        Close
+      </button>
+    </div>
+  );
+
   const handleShare = () => {
-    const shareData = {
-      title: 'Check out this UI design',
-      text: author ? `${title} created by ${author.substring(0, author.indexOf("@"))}` : title,
-      url: window.location.href
-    };
-  
-    if (navigator.share) {
-      navigator.share(shareData)
-        .then(() => {
-          console.log('Shared successfully');
-        })
-        .catch((error) => {
-          console.error('Error sharing:', error);
-        });
-    } else if (navigator.clipboard && navigator.clipboard.writeText) {
-      const shareUrl = `${shareData.title}\n\n${shareData.text}\n\n${shareData.url}`;
-      navigator.clipboard.writeText(shareUrl)
-        .then(() => {
-          console.log('URL copied to clipboard');
-        })
-        .catch((error) => {
-          console.error('Error copying URL:', error);
-        });
-    } else {
-      console.log('Sharing not supported');
-    }
+    const url = window.location.href; // Get the current URL
+    navigator.clipboard.writeText(url); // Copy the URL to clipboard
+    setCopyStatus(prevCopyStatus => ({
+      ...prevCopyStatus,
+      url: true,
+    }));
+    setTimeout(() => {
+      setCopyStatus(prevCopyStatus => ({
+        ...prevCopyStatus,
+        url: false
+      }));
+    }, 1500);
+    toast.success(
+      <CustomToast
+        message="Your link is copied !"
+        closeToast={toast.dismiss}
+      />,
+      {
+        position: toast.POSITION.TOP_RIGHT,
+        closeButton: false,
+        autoClose: 2000,
+      }
+    );
   };
   
   
@@ -196,6 +211,9 @@ function UIDetails() {
           </div>
         }
       </div>
+      <ToastContainer
+        style={{ backgroundColor: "transparent", color: "#ddd" }}
+      />
     </div>
   );
 }

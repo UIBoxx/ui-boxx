@@ -3,11 +3,13 @@ import TypingComponent from "../typingEffect/typinig";
 // import MyDemo from "../Demo/demo";
 // import demoVid from '../images/demo.mp4'
 import MyHelmet from "../helmet/helmet";
+import BuyMeCoffee from "../Buy Me Coffee/support";
 
 
 function LandingPage() {
   return (
     <div className="l-body">
+      <BuyMeCoffee/>
       <MyHelmet title="Home" des="Elevate your web design with UIBoxx's free UI components. Create stunning user interfaces effortlessly and customize them to fit your needs. Take advantage of our AI-powered tool for UI generation. Get started now!" keywords="UI components,Web design,User interfaces,Customizable UI,Free UI components,Free Website design,AI-powered tools,Neumorphic Design,GlassMorphic Design,free Neumorphic Design tool,free GlassMorphic Design tool,Free SVG shape generator,Web development,UX design,Responsive design,Front-end development,Web templates,Design resources,Website elements,UI design inspiration,CSS frameworks,Mobile-friendly design,HTML5 components,Visual design,Interaction design,Web accessibility."/>
       <div className="l-intro">
         <div className="l-intro-left">
