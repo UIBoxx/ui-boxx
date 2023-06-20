@@ -91,11 +91,11 @@ function UIDetails() {
     }, 1500);
     toast.success(
       <CustomToast
-        message="Your link is copied !"
+        message="Link copied !"
         closeToast={toast.dismiss}
       />,
       {
-        position: toast.POSITION.TOP_RIGHT,
+        position: toast.POSITION.TOP_CENTER,
         closeButton: false,
         autoClose: 2000,
       }
