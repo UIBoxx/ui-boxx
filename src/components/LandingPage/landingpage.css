@@ -129,12 +129,17 @@
 }
 .l-content-right{
     width: 600px;
-    min-height: 300px;
-    /* border: 1px solid red; */
+    min-height: 200px;
     display: flex;
     align-items: start;
     justify-content: center;
     flex-direction: column;
+    padding: 2rem;
+    background: rgba(49, 50, 51, 0.21);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 5px;
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
 }
 
 .l-content-right button{
@@ -174,8 +179,15 @@
 .l-content-right>h3{
     color: #ddd;
     background-color: transparent;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 200;
+}
+
+#l-content-right{
+    align-items: end;
+    gap: 1.2rem;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 @media (max-width: 600px) {

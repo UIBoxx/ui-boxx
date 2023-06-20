@@ -74,7 +74,7 @@ function LandingPage() {
       </div>
 
       <div className="l-content" id="l-content">
-      <div className="l-content-right">
+      <div className="l-content-right" id="l-content-right">
         <h3>"<span style={{color:'red',backgroundColor:'transparent'}}>UIBOXX</span> helps you make your UI more beautiful and improve the overall user experience. With their tools and resources, you can create visually appealing and user-friendly interfaces that captivate and delight your users."</h3>
         <a id="l-btn" href="/tools">
             <button>See Tools</button>

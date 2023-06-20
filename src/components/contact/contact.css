@@ -32,12 +32,13 @@
 
 .contact-left {
   width: 600px;
-  min-height: 300px;
+  min-height: 100px;
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   /* border: 1px solid red; */
+  padding: 1rem 0;
 }
 
 .contact-left h1{
@@ -48,7 +49,7 @@
 
 .contact-left p{
     background-color: transparent;
-    color: #ddd;
+    color: #1a9a04;
 }
 
 .contact-right {
@@ -106,7 +107,7 @@
 #send{
     background-color: var(--color-red);
     width: 50%;
-    height: 30px;
+    height: 40px;
     border: none;
     border-radius: 10px;
     color: #ddd;
@@ -132,7 +133,7 @@
         margin-bottom: 0.6rem;
     }
     .contact-left{
-        width: 300px;
+        width: 340px;
         padding: 1rem;
     }
     .contact-right{
