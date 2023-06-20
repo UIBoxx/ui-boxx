@@ -12,6 +12,9 @@ import LandingPage from "./components/LandingPage/landingpage";
 import TypingEffect from "./components/typingEffect/typinig";
 import ContactUs from "./components/contact/contact";
 import UIGenerate from "./components/UIGenerate/uizen";
+import TermsAndConditions from "./components/terms & Conditions/terms";
+import PrivacyPolicy from "./components/terms & Conditions/privacy";
+import Disclaimer from "./components/terms & Conditions/disclaimer";
 
 function App() {
   return (
@@ -43,7 +46,11 @@ function App() {
             />
             <Route path="/type" element={<TypingEffect />} />
             <Route path="/contact" element={<ContactUs />} />
+            <Route path="/about-us" element={<ContactUs />} />
             <Route path="/generate" element={<UIGenerate />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </body>
         <MyFooter />

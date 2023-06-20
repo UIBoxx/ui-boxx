@@ -31,6 +31,11 @@ function MyFooter() {
       </div>
       <div className="f-desc">
         <p>UIBOXX, 2023 All right reserved.</p>
+        <span>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms-and-conditions">Terms and Conditions</a>
+          <a href="/disclaimer">Disclaimer</a>
+          <a href="/about-us">About Us</a></span>
       </div>
     </div>
   );
