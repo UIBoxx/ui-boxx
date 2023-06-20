@@ -2,6 +2,10 @@ import "./tools.css";
 import svgShape from '../images/svgShape.png';
 import { useNavigate, To } from 'react-router-dom';
 import MyHelmet from "../helmet/helmet";
+import Lottie from "lottie-react";
+import Glass from "../images/glass.json";
+import Neu from "../images/neu.json";
+
 
 
 function Tools() {
@@ -19,13 +23,16 @@ function Tools() {
         <a onClick={()=>handleClick("/squarecle-svg-shape-generator")}>Generate</a>
       </div>
       <div className="glass-card">
-      <img src='https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/30/posts/93333/image-upload/glassmorphism_app_ui.jpg' alt="" />
+        <div className="lottie-card">
+      <Lottie animationData={Glass} loop={true} style={{scale:'1.3'}} />
+        </div>
         <span>GlassMorphic Effect</span>
         <a onClick={()=>handleClick("/glass-morphic-effect-generator")}>Generate</a>
       </div>
       <div className="neu-card">
-        <img src="https://cms-assets.tutsplus.com/cdn-cgi/image/width=850/uploads/users/30/posts/36518/image-upload/soft-ui.jpg" alt="" />
-        <span>Neumorphic Effect</span>
+      <div className="lottie-card">
+      <Lottie animationData={Neu} loop={true} style={{scale:'0.7'}} />
+        </div>        <span>Neumorphic Effect</span>
         <a onClick={()=>handleClick("/neumorphic-effect-generator")}>Generate</a>
       </div>
       <div className="shapes1"></div>

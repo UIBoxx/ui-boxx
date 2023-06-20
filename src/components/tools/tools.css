@@ -20,6 +20,15 @@
   flex-direction: column;
   z-index: 2;
 }
+
+.lottie-card{
+    width: 180px;
+    height: 120px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .tools-body > * > img {
     width: 180px;
     height: 120px;

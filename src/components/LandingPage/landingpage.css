@@ -93,7 +93,7 @@
     z-index: 0;
 }
 
-.l-intro-right>span:last-child{
+.rocket{
     font-size: 2rem;
     background-color: transparent;
     animation: rotate 20s linear infinite;
@@ -110,19 +110,84 @@
      }
 }
 
+.l-content{
+    width: 90vw;
+    min-height: 30vh;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.l-content-left{
+    width: 400px;
+    min-height: 300px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.l-content-right{
+    width: 600px;
+    min-height: 300px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.l-content-right button{
+    background-color: var(--color-red);
+    border: none;
+    padding: 0.7rem 3rem;
+    color: #fff;
+}
+
+.l-content-right button:hover{
+    background-color: var(--primary-color);
+    border: 1px solid var(--color-red);;
+    color: #fff;
+}
+
+.l-content-right>span{
+    background-color: transparent;
+    font-size: 3rem;
+    color: var(--color-red);
+}
+
+.l-content-right>ul{
+    font-size: 1rem;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.l-content-right>ul>li{
+    list-style: none;
+    /* border: 1px solid red; */
+    color: #ddd;
+    background-color: transparent;
+}
+.l-content-right>h3{
+    color: #ddd;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
 
 @media (max-width: 600px) {
     .l-body{
         min-height: 100vh;
         padding: 5rem 0;
-        /* border: 1px solid red; */
     }
     .l-intro{
+        min-height: 50vh;
         justify-content: center;
     }
     .l-intro-left{
         width: 320px;
-        min-height: 400px;
+        min-height: 300px;
         padding: 1rem 0;
         justify-content: center;
     }
@@ -136,9 +201,9 @@
     }
     .l-intro-right{
         width: 320px;
-        min-height: 400px;
+        min-height: 300px;
         padding: 1rem 0;
-        align-items: start;
+        align-items: center;
     }
     .l-intro-right>span:last-child{
         animation: rotate 15s linear infinite;
@@ -151,5 +216,24 @@
         100% { transform: translateX(50rem);
             rotate: -90deg;
          }
+    }
+    .l-content{
+        min-height: 60vh;
+        padding: 1rem 0;
+        flex-direction: column-reverse;
+        /* border: 1px solid red; */
+    }   
+
+    #l-content{
+        flex-direction: column;
+    }
+
+    .l-content-left{
+        width: 340px;
+    }
+
+    .l-content-right{
+        width: 340px;
+        gap: 1rem;
     }
   }
