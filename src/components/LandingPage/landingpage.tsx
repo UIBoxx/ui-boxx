@@ -46,7 +46,7 @@ function LandingPage() {
       </div>
       <div className="l-content">
         <div className="l-content-left">
-          <Lottie animationData={Anim} loop={true} style={{ width: "340px"}} />
+          <Lottie animationData={Anim} loop={true} style={{ width: "340px" }} />
         </div>
         <div className="l-content-right" id="features">
           <span>
@@ -90,6 +90,26 @@ function LandingPage() {
             </i>
             <h2>High Quality</h2>
             <p>Experience top-notch quality that exceeds expectations.</p>
+          </span>
+          <span>
+            <svg
+              id="visual"
+              viewBox="0 0 580 580"
+              width="580"
+              height="580"
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+            >
+              <rect x="0" y="0" width="900" height="600" fill="#001122"></rect>
+              <g transform="translate(300.22360293902625 162.21136516438662)">
+                <path
+                  d="M97.7 -129.9C129.9 -131.4 161.4 -109.7 219.2 -73.6C277 -37.4 361.2 13.3 345.7 42.4C330.2 71.5 215 79 161.3 138.3C107.6 197.7 115.5 309 78.4 364.3C41.3 419.6 -40.8 419 -79.1 364.3C-117.4 309.7 -112 201 -134.7 137.5C-157.5 74 -208.4 55.6 -230.1 22.2C-251.7 -11.1 -244.1 -59.6 -206 -73.7C-167.8 -87.8 -99.1 -67.6 -59.7 -62.7C-20.3 -57.9 -10.1 -68.4 11.3 -86.1C32.8 -103.7 65.6 -128.4 97.7 -129.9"
+                  fill="none"
+                  stroke="rgb(159, 7, 7)"
+                  stroke-width="20"
+                ></path>
+              </g>
+            </svg>
           </span>
         </div>
         <span className="rocket">🚀</span>
