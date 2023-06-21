@@ -4,7 +4,7 @@ function BuyMeCoffee() {
   
   return (
     <div className="buy-coffee-card" >
-     <a href="https://www.buymeacoffee.com/bprabin62">
+     <a href="https://www.buymeacoffee.com/uiboxx">
      <span>
         <svg
           width="25"
