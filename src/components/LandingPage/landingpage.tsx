@@ -4,7 +4,9 @@ import MyHelmet from "../helmet/helmet";
 import BuyMeCoffee from "../Buy Me Coffee/support";
 import Lottie from "lottie-react";
 import Anim from "../images/anim.json";
-import Beautify from '../images/beautify.json';
+import Beautify from "../images/beautify.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 
 function LandingPage() {
   return (
@@ -44,45 +46,78 @@ function LandingPage() {
       </div>
       <div className="l-content">
         <div className="l-content-left">
-          <Lottie animationData={Anim} loop={true} style={{ width: "340px" }} />
+          <Lottie animationData={Anim} loop={true} style={{ width: "340px"}} />
         </div>
-        <div className="l-content-right">
-          <span>Why UI?</span>
-          <ul>
-            <li>
-              - Beautiful User Interface (UI) enhances user experience.
-              </li>
-              <li>
-                - Well-designed UI captures attention and guides users
-                seamlessly.
-              </li>
-              <li>
-                - Aesthetically pleasing UI creates positive emotional
-                connection.
-              </li>
-              <li>
-                - Beautiful UI instills trust, professionalism, and credibility.
-              </li>
-              <li>
-                - Improved usability and higher user retention rates are
-                achieved with a beautiful UI.
-              </li>
-            
-          </ul>
+        <div className="l-content-right" id="features">
+          <span>
+            <i>
+              <FontAwesomeIcon
+                icon={faLaptopCode}
+                style={{
+                  backgroundColor: "transparent",
+                  color: "green",
+                  fontSize: "2rem",
+                }}
+              />
+            </i>
+            <h2>Fully Customized</h2>
+            <p>Unleash your creativity with complete customization options.</p>
+          </span>
+          <span>
+            <i>
+              <FontAwesomeIcon
+                icon={faLaptopCode}
+                style={{
+                  backgroundColor: "transparent",
+                  color: "green",
+                  fontSize: "2rem",
+                }}
+              />
+            </i>
+            <h2>100% Free</h2>
+            <p>Free for personal and commercial use.</p>
+          </span>
+          <span>
+            <i>
+              <FontAwesomeIcon
+                icon={faLaptopCode}
+                style={{
+                  backgroundColor: "transparent",
+                  color: "green",
+                  fontSize: "2rem",
+                }}
+              />
+            </i>
+            <h2>High Quality</h2>
+            <p>Experience top-notch quality that exceeds expectations.</p>
+          </span>
         </div>
         <span className="rocket">🚀</span>
       </div>
 
       <div className="l-content" id="l-content">
-      <div className="l-content-right" id="l-content-right">
-        <h3>"<span style={{color:'red',backgroundColor:'transparent'}}>UIBOXX</span> helps you make your UI more beautiful and improve the overall user experience. With their tools and resources, you can create visually appealing and user-friendly interfaces that captivate and delight your users."</h3>
-        <a id="l-btn" href="/tools">
+        <div className="l-content-right" id="l-content-right">
+          <h3>
+            "
+            <span style={{ color: "red", backgroundColor: "transparent" }}>
+              UIBOXX
+            </span>
+            helps you make your UI more beautiful and improve the overall user
+            experience. With their tools and resources, you can create visually
+            appealing and user-friendly interfaces that captivate and delight
+            your users."
+          </h3>
+          <a id="l-btn" href="/tools">
             <button>See Tools</button>
           </a>
-      </div>
-      <div className="l-content-left">
-      <Lottie animationData={Beautify} loop={true} style={{ width: "340px" }} />
-      </div>
+        </div>
+        <div className="l-content-left">
+          <Lottie
+            animationData={Beautify}
+            loop={true}
+            style={{ width: "340px", backgroundColor: "transparent" }}
+          />
+        </div>
       </div>
     </div>
   );
