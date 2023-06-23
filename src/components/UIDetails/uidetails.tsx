@@ -168,6 +168,7 @@ function UIDetails() {
           <textarea
             id="textarea1"
             name="textarea1"
+            spellCheck='false'
             value={htmlCode}
             onChange={(event) => setHtmlCode(event.target.value)}
           />
@@ -183,6 +184,7 @@ function UIDetails() {
           <textarea
             id="textarea2"
             name="textarea2"
+            spellCheck='false'
             value={cssCode}
             onChange={(event) => setCssCode(event.target.value)}
           />
@@ -199,6 +201,7 @@ function UIDetails() {
             <textarea
               id="textarea3"
               name="textarea3"
+              spellCheck='false'
               value={jsCode}
               onChange={(event) => setJsCode(event.target.value)}
             />
