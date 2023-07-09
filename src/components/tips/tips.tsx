@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./tips.css";
 import MyLoader from "../loader/loader";
+import MyHelmet from "../helmet/helmet";
 
 interface TipsData {
   name: string;
@@ -34,6 +35,8 @@ export default function Tips() {
 
   return (
     <div className="tips-body">
+    <MyHelmet title="UI/UX Tips" des="Discover valuable UI/UX design tips and explore essential UX laws to create exceptional user experiences. Enhance your design skills and improve user satisfaction with expert guidance on user interface design, usability principles, interaction design, and more." keywords="UI/UX design, User experience, User interface design, Usability, Interaction design, UX laws, Design principles, User-centric design, Visual hierarchy, Information architecture, Wireframing, Prototyping, Responsive design, Mobile UX, Accessibility, Cognitive load, User testing, Design patterns, Human-computer interaction, Graphic design"/>
+
       {isLoading ? (
          <MyLoader />
       ) : (
