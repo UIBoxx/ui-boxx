@@ -97,15 +97,18 @@ function MainContent() {
               onChange={handleSearchInputChange}
             />
           </div>
-          <MyAside
+          {
+            isLoading?null:<MyAside
             tags={apiData.map((item) => item.tags)}
             selectedTag={selectedTag}
             setSelectedTag={setSelectedTag}
           />
+          }
           {isLoading ? (
             <MyLoader />
-          ) : (
-            currentItems.map((item) => <UiCard key={item._id} data={item} />)
+            ) : (
+            currentItems.map((item) =>
+            <UiCard key={item._id} data={item} />)
           )}
           <div className="m-propagation">
             <div className="pagination">
