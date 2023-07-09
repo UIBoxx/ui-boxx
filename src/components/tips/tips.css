@@ -1,0 +1,80 @@
+.tips-body{
+    min-height: 80vh;
+    width: 100vw;
+    /* border: 1px solid #fff; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 25px 0;
+}
+
+.tips-card{
+    width: 300px;
+    height: 410px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #eee;
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+  
+}
+.tips-head{
+    height: 50px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;   
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+
+.tips-head>h3{
+    font-size: 1.5rem;
+    color: #413d3d;
+    background-color: transparent;
+}
+
+.tips-card-top{
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    /* border: 1px solid red; */
+}
+
+.tips-left,.tips-right{
+    width: 140px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid yellow; */
+}
+
+.tips-left img,.tips-right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tips-card-bottom{
+    width: 280px;
+    height: 150px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: 5px;
+    background-color: transparent;
+    /* border: 1px solid red; */
+}
+
+.tips-card-bottom span{
+    background-color: transparent;
+    color: #413d3d;
+}

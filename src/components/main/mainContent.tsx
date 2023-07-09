@@ -22,7 +22,7 @@ function MainContent() {
   const [searchQuery, setSearchQuery] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
-  const itemsPerPage = 12;
+  const itemsPerPage = 15;
 
   useEffect(() => {
     const cachedData = localStorage.getItem("apiData");
@@ -88,13 +88,6 @@ function MainContent() {
     <div className="page-body">
       <MyHelmet title="Free UI components" des="Enhance your web development projects with our collection of free customizable UI components. From cards and inputs to loaders and backgrounds, our UI components are designed to elevate your website's aesthetics and functionality to the next level." keywords="Free UI components, Customizable UI elements, Web development resources, Card components, Input components, Text components, Loader components, Background components, Form components, Spinner components, Box components, Switch components, Button components, Icon components, Navbar components, Web design elements, User interface enhancements, Website functionality, UI customization options, Front-end development tools"/>
       <div className="main-content">
-        <div className="m-left">
-          <MyAside
-            tags={apiData.map((item) => item.tags)}
-            selectedTag={selectedTag}
-            setSelectedTag={setSelectedTag}
-          />
-        </div>
         <div className="m-right">
           <div className="m-search-box">
             <input
@@ -104,6 +97,11 @@ function MainContent() {
               onChange={handleSearchInputChange}
             />
           </div>
+          <MyAside
+            tags={apiData.map((item) => item.tags)}
+            selectedTag={selectedTag}
+            setSelectedTag={setSelectedTag}
+          />
           {isLoading ? (
             <MyLoader />
           ) : (

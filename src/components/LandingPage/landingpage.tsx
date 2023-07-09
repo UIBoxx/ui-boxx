@@ -119,10 +119,10 @@ function LandingPage() {
         <div className="l-content-right" id="l-content-right">
           <h3>
             "
-            <span style={{ color: "red", backgroundColor: "transparent" }}>
-              UIBOXX
+            <span style={{ color: "rgb(159, 7, 7)", backgroundColor: "transparent" }}>
+            UIBOXX &nbsp;
             </span>
-            helps you make your UI more beautiful and improve the overall user
+             helps you make your UI more beautiful and improve the overall user
             experience. With their tools and resources, you can create visually
             appealing and user-friendly interfaces that captivate and delight
             your users."

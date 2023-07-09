@@ -1,29 +1,16 @@
 .aside {
-  width: 250px;
-  min-height: 500px;
+  width: 90vw;
+  min-height: 100px;
+  /* border: 1px solid red; */
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   flex-direction: column;
   color: #ddd;
 }
 
-.a-header {
-  flex: 1;
-  width: 80%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.a-header h1 {
-  color: var(--color-red);
-  font-size: 2.5rem;
-}
-
 .a-body {
-  flex: 4;
-  width: 80%;
+  width: 90vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -31,58 +18,23 @@
 
 .a-body > ul {
   list-style: none;
+  display: flex;
+  width: 90vw;
+  gap: 5px;
+  /* border: 1px solid pink; */
+  overflow: scroll;
 }
 
 .a-body > ul > li {
   margin-top: 0.5rem;
-  padding: 5px;
+  padding: 5px 10px;
   cursor: pointer;
-  color: #ddd;
+  color: #fff;
+  border-radius: 5px;
 }
 
 .selected {
   color: rgb(155, 27, 27);
-  background-color: #a0181893;
+  background-color: var(--color-red);
   border-radius: 5px;
-}
-
-@media (max-width: 600px) {
-  .aside {
-    width: 96%;
-    display: block;
-    min-height: 100px;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid red; */
-    padding: 2rem 10px;
-  }
-  .a-header {
-    flex: 1;
-    width: 96%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .a-header h1 {
-    color: var(--color-red);
-    font-size: 2.5rem;
-    margin: 1rem 0;
-  }
-  .a-body {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid #ddd; */
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-
-  .a-body > ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-    align-items: center;
-  }
 }

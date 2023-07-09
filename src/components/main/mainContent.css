@@ -4,13 +4,9 @@
     display: flex;
     align-items: start;
     gap: 5px;
+    padding: 25px 0;
     justify-content: space-between;
      /* border: 1px solid #fff; */
-}
-
-.m-left{
-    flex: 1;
-    /* border: 1px solid #fff; */
 }
 
 .m-right{
@@ -74,8 +70,4 @@
       justify-content: center;
       flex-direction: column;
     }
-    /* .m-left{
-        display: block;
-    } */
-    /* Additional styles for smaller screens */
   }

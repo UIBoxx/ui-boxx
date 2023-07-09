@@ -16,9 +16,6 @@ const MyAside: React.FC<MyAsideProps> = ({ tags, selectedTag, setSelectedTag }) 
 
   return (
     <div className="aside">
-      <div className="a-header">
-        <h1>Category</h1>
-      </div>
       <div className="a-body">
         <ul>
           <li

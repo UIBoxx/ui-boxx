@@ -16,6 +16,7 @@ import TermsAndConditions from "./components/terms & Conditions/terms";
 import PrivacyPolicy from "./components/terms & Conditions/privacy";
 import Disclaimer from "./components/terms & Conditions/disclaimer";
 import BuyMeCoffee from "./components/Buy Me Coffee/support";
+import Tips from "./components/tips/tips";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               }
             />
             <Route path="/tools" element={<Tools />} />
+            <Route path="/tips" element={<Tips />} />
             <Route path="/code/:id" element={<UIDetails />} />
             <Route path="/ui-components" element={<MainContent />} />
             <Route
