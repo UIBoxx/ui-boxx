@@ -77,4 +77,11 @@
 .tips-card-bottom span{
     background-color: transparent;
     color: #413d3d;
+    font-size: 1em;
 }
+
+@media (max-width: 600px) {
+    .tips-card-bottom span{
+        font-size: .8em;
+    }
+  }
